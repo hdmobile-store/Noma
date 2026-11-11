@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f3ee">
+<title>نُما | قاب و لوازم جانبی موبایل</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+:root{--bg:#f5f3ee;--ink:#20211e;--muted:#777970;--line:#deded5;--accent:#b5c6a4;--dark:#252820;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}
+.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+.topline{font-size:12px;text-align:center;padding:10px;background:var(--dark);color:#f8f7f2;letter-spacing:.2px}
+header{position:sticky;top:0;z-index:10;background:#f5f3eeda;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:27px;font-weight:800;letter-spacing:2px}.brand span{color:#829775}.links{display:flex;gap:30px;font-size:13px;color:#565950}.actions{display:flex;gap:10px;align-items:center}.iconbtn{border:1px solid var(--line);background:transparent;border-radius:50%;width:40px;height:40px;display:grid;place-items:center}.cart{font-size:12px;border:1px solid var(--line);padding:10px 15px;border-radius:30px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding:58px 0 74px}.eyebrow{font-size:12px;color:#7b8d6e;letter-spacing:1.5px;font-weight:700}.hero h1{font-size:clamp(38px,5vw,64px);line-height:1.35;margin:18px 0;font-weight:600;letter-spacing:-2px}.hero h1 em{font-style:normal;color:#849775}.hero p{color:var(--muted);line-height:2.2;font-size:14px;max-width:450px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 23px;border-radius:4px;background:var(--dark);color:white;font-size:13px;border:1px solid var(--dark);transition:.2s}.btn:hover{background:#4a5142}.btn.light{background:transparent;color:var(--dark);margin-right:8px}.hero-photo{height:510px;position:relative}.hero-photo img{width:100%;height:100%;object-fit:cover;border-radius:3px}.float-note{position:absolute;bottom:22px;right:-22px;background:var(--white);padding:17px 22px;box-shadow:0 10px 35px #00000012;font-size:12px}.float-note b{display:block;font-size:17px;margin-bottom:4px}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin:15px 0 28px}.section-head h2{font-size:29px;font-weight:600;margin:8px 0}.section-head p{font-size:13px;color:var(--muted);margin:0}.viewall{font-size:12px;border-bottom:1px solid #8d967f;padding-bottom:5px}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:88px}.cat{height:260px;position:relative;overflow:hidden;background:#e5e4dc}.cat img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.cat:hover img{transform:scale(1.05)}.cat:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#0008)}.cat-label{position:absolute;z-index:1;bottom:22px;right:24px;color:white}.cat-label b{display:block;font-size:20px}.cat-label span{font-size:11px;opacity:.85}
+
+.filter-row{display:flex;gap:9px;flex-wrap:wrap;margin:-8px 0 22px}
+.filter-chip{border:1px solid var(--line);background:transparent;padding:8px 15px;border-radius:30px;font-size:11px;color:#55594f}
+.filter-chip.active,.filter-chip:hover{background:var(--dark);border-color:var(--dark);color:#fff}
+
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:90px}.product{min-width:0}.product-img{height:270px;position:relative;background:#e9e8e1;overflow:hidden}.product-img img{width:100%;height:100%;object-fit:cover;transition:.4s}.product:hover img{transform:scale(1.04)}.tag{position:absolute;top:12px;right:12px;background:#f8f7f1;padding:6px 10px;font-size:10px}.product-info{padding:13px 2px}.product-info h3{font-size:14px;font-weight:500;margin:0 0 8px}.price{font-size:13px;font-weight:700}.old{color:#999;text-decoration:line-through;font-weight:400;margin-right:7px;font-size:11px}.add{float:left;border:1px solid var(--line);background:transparent;width:32px;height:32px;border-radius:50%;font-size:18px}
+.banner{background:#e5e8de;display:grid;grid-template-columns:1fr 1fr;min-height:330px;margin-bottom:90px;align-items:center}.banner img{width:100%;height:330px;object-fit:cover}.banner-copy{padding:35px 10%}.banner-copy h2{font-size:30px;font-weight:600;line-height:1.6;margin:12px 0}.banner-copy p{font-size:13px;color:#666d5f;line-height:2}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 0 85px}.value{text-align:center;border-left:1px solid var(--line);padding:10px 18px}.value:last-child{border:0}.value .symbol{font-size:24px}.value h3{font-size:14px}.value p{font-size:12px;color:var(--muted);line-height:1.9}
+footer{background:#252820;color:#f7f6f0;padding:48px 0 25px}.footgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:35px}.footgrid p,.footgrid a{font-size:12px;color:#c4c7bb;line-height:2.2}.footgrid h3{font-size:14px}.copyright{border-top:1px solid #ffffff25;margin-top:35px;padding-top:18px;color:#aeb2a5;font-size:10px}
+.chat-launch{position:fixed;bottom:22px;left:22px;z-index:20;border:0;border-radius:50px;background:#283026;color:#fff;padding:13px 19px;box-shadow:0 8px 25px #0003;font-size:13px}.chatbox{position:fixed;bottom:84px;left:22px;width:min(340px,calc(100vw - 32px));background:white;border:1px solid var(--line);box-shadow:0 15px 50px #0002;z-index:21;display:none;border-radius:9px;overflow:hidden}.chatbox.open{display:block}.chathead{background:#283026;color:white;padding:15px;display:flex;justify-content:space-between;align-items:center}.chathead small{display:block;color:#cbd3c3;font-size:10px;margin-top:3px}.chatbody{height:240px;padding:15px;overflow:auto;background:#fafaf7}.bubble{background:#e9eee4;padding:10px 12px;border-radius:10px 10px 2px 10px;font-size:12px;line-height:1.9;max-width:90%;margin-bottom:10px}.bubble.user{background:#f0eee8;margin-right:auto;border-radius:10px 10px 10px 2px}.chatform{display:flex;border-top:1px solid var(--line);padding:8px;gap:7px}.chatform input{flex:1;min-width:0;border:0;outline:0;padding:9px;font:inherit;font-size:12px}.chatform button{border:0;background:#283026;color:white;border-radius:5px;padding:8px 13px}
+.toast{position:fixed;bottom:25px;right:50%;transform:translateX(50%);background:#252820;color:white;padding:10px 18px;border-radius:30px;font-size:12px;opacity:0;pointer-events:none;transition:.3s}.toast.show{opacity:1}
+
+.menu-toggle{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px}
+.menu-toggle span{display:block;width:17px;height:1.5px;background:#292c25;border-radius:2px}
+.menu-drawer{position:fixed;top:0;right:0;height:100vh;width:min(320px,86vw);background:#f8f7f2;z-index:40;padding:26px;box-shadow:-15px 0 45px #0002;transform:translateX(110%);transition:transform .28s ease}
+.menu-drawer.open{transform:translateX(0)}
+.menu-shade{position:fixed;inset:0;background:#17191470;z-index:39;opacity:0;visibility:hidden;transition:.25s}
+.menu-shade.open{opacity:1;visibility:visible}
+.drawer-top{display:flex;align-items:center;justify-content:space-between;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.drawer-close{border:0;background:transparent;font-size:25px}
+.drawer-title{font-size:12px;color:var(--muted);margin:25px 0 12px}
+.drawer-link{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}
+.drawer-link span{color:#8a927f;font-size:11px}
+
+@media(max-width:800px){.links{display:none}.hero{grid-template-columns:1fr;gap:25px;padding-top:35px}.hero-photo{height:390px}.float-note{right:10px}.products{grid-template-columns:repeat(2,1fr)}.product-img{height:230px}.banner{grid-template-columns:1fr}.banner img{height:250px}.categories{gap:10px}.cat{height:200px}.cat-label{right:14px;bottom:15px}.cat-label b{font-size:16px}.footgrid{grid-template-columns:1fr 1fr}.footgrid>div:first-child{grid-column:1/-1}}
+@media(max-width:480px){.wrap{width:calc(100% - 28px)}.nav{height:65px}.brand{font-size:23px}.hero h1{font-size:42px}.hero-photo{height:330px}.categories{grid-template-columns:1fr 1fr}.cat:last-child{display:none}.cat{height:175px}.section-head h2{font-size:23px}.products{gap:12px}.product-img{height:190px}.values{grid-template-columns:1fr;gap:8px}.value{border:0;border-bottom:1px solid var(--line)}.footgrid{grid-template-columns:1fr 1fr}}
+
+/* NOMA visual refresh */
+:root{--bg:#f7f6f1;--ink:#20251e;--muted:#74796f;--line:#e5e4dc;--accent:#c5d3ad;--dark:#263126;--white:#fff}
+body{background:radial-gradient(ellipse at 88% 10%,#e9eddf 0,transparent 24%),var(--bg)}
+.topline{background:#263126;padding:11px;font-size:11px;letter-spacing:.3px}
+header{background:#f7f6f1e8}
+.brand{letter-spacing:1px}
+.brand span{color:#b1c48d}
+.nav{height:82px}
+.links a{position:relative;transition:color .2s}
+.links a:hover{color:#82966e}
+.links a:after{content:"";position:absolute;bottom:-8px;right:0;width:0;height:1px;background:#82966e;transition:width .25s}
+.links a:hover:after{width:100%}
+.hero{padding-top:72px;padding-bottom:84px;gap:58px}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;border:1px solid #dce2d2;border-radius:30px;padding:7px 13px;font-size:10px;color:#69785d;margin-bottom:24px;background:#ffffff80}
+.kicker-dot{width:7px;height:7px;border-radius:50%;background:#91a77a;box-shadow:0 0 0 4px #91a77a22}
+.hero h1{font-size:clamp(42px,5.3vw,70px);line-height:1.3;letter-spacing:-2.5px}
+.hero h1 em{color:#83966e}
+.hero p{font-size:13px;max-width:410px}
+.btn{border-radius:30px;padding:14px 24px;box-shadow:0 8px 20px #26312616}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 24px #26312622}
+.btn.light{border-color:#d6d9ce;box-shadow:none}
+.hero-photo{height:530px}
+.hero-photo:before{content:"";position:absolute;z-index:-1;inset:25px -22px -20px 22px;border:1px solid #d6ddcc;border-radius:5px}
+.hero-photo img{border-radius:5px 70px 5px 5px;box-shadow:0 24px 55px #27312420;object-fit:contain;background:#eeeae1;padding:20px}
+.float-note{right:-28px;bottom:30px;border-radius:12px;padding:18px 23px;box-shadow:0 14px 38px #2631261c}
+.float-note b{font-size:15px}
+.photo-stamp{position:absolute;top:20px;left:20px;border:1px solid #ffffffa8;color:#fff;border-radius:50%;width:56px;height:56px;display:grid;place-content:center;text-align:center;font-size:10px;line-height:1.15;backdrop-filter:blur(8px);background:#ffffff22}
+.quick-benefits{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;margin-bottom:78px}
+.quick-benefits>div{display:flex;align-items:center;justify-content:center;gap:13px;border-left:1px solid var(--line)}
+.quick-benefits>div:last-child{border:0}
+.quick-benefits b{font-size:11px;color:#91a27e;letter-spacing:1px}
+.quick-benefits span{font-size:12px;color:#5e6458}
+.section-head{margin-bottom:30px}
+.section-head h2{font-size:31px;letter-spacing:-.7px}
+.eyebrow{letter-spacing:1.8px}
+.categories{gap:20px}
+.cat{height:280px;border-radius:12px}
+.cat img{filter:saturate(.72);object-fit:cover}
+.cat:after{inset:25% 0 0;background:linear-gradient(transparent,#10170fc9)}
+.cat-label{right:25px;bottom:25px}
+.cat-label b{font-size:21px}
+.filter-row{gap:8px;margin:0 0 24px}
+.filter-chip{padding:9px 17px;border-radius:30px;background:#fff8;border-color:#e4e5dc;transition:.2s}
+.filter-chip.active,.filter-chip:hover{background:#263126;border-color:#263126}
+.products{gap:20px}
+.product{background:#fff;border:1px solid #eeede7;border-radius:13px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.product:hover{transform:translateY(-6px);box-shadow:0 16px 35px #29332312}
+.product-img{height:270px;background:#f0efe9}
+.product-img img{padding:12px;border-radius:16px;object-fit:contain;background:linear-gradient(145deg,#f5f3ec,#ebe9e0)}
+.tag{top:14px;right:14px;border-radius:20px;background:#f8f8f1;font-size:10px}
+.product-info{padding:15px 16px 17px;min-height:83px}
+.product-info h3{font-size:13px;margin-bottom:10px}
+.price{font-size:12px;color:#536447}
+.add{background:#f5f6f0;border-color:#e8e9e1;color:#35432f;transition:.2s}
+.add:hover{background:#263126;color:white}
+.banner{border-radius:18px;overflow:hidden;background:linear-gradient(120deg,#e7ebdf,#dce4d2);box-shadow:0 18px 45px #2631260b}
+.banner-copy h2{font-size:34px}
+.banner img{filter:saturate(.72);object-fit:contain;background:#e9ece3;padding:24px}
+.values{gap:16px}
+.value{background:#fff;border:1px solid #eeede7;border-radius:13px;padding:24px 18px}
+.value:last-child{border:1px solid #eeede7}
+.value .symbol{display:grid;place-items:center;margin:auto;width:44px;height:44px;border-radius:50%;background:#eff2e9;color:#738664}
+.value h3{margin:13px 0 8px}
+footer{background:#20271f}
+.chat-launch{background:#82966e;color:#fff;border:1px solid #fff8;box-shadow:0 10px 28px #20271f35}
+.chat-launch:hover{background:#667c55}
+.chatbox{border-radius:16px}
+.chathead{background:#263126}
+.chatform button{background:#82966e}
+.toast{border-radius:30px;box-shadow:0 8px 25px #0002}
+.menu-drawer{background:#f8f8f2}
+@media(max-width:800px){
+ .hero{padding-top:45px;gap:34px}
+ .hero-photo{height:390px}
+ .hero-photo:before{inset:15px -8px -12px 8px}
+ .quick-benefits{margin-bottom:58px}
+ .cat{height:210px}
+}
+@media(max-width:480px){
+ .nav{height:68px}
+ .hero{padding-top:34px;padding-bottom:55px}
+ .hero-kicker{margin-bottom:18px}
+ .hero-photo{height:330px}
+ .photo-stamp{width:48px;height:48px}
+ .quick-benefits{gap:8px;padding:14px 0;margin-bottom:48px}
+ .quick-benefits>div{gap:6px;flex-direction:column;text-align:center}
+ .quick-benefits span{font-size:10px}
+ .section-head h2{font-size:25px}
+ .cat{border-radius:9px;height:175px}
+ .products{gap:12px}
+ .product{border-radius:10px}
+ .product-img{height:190px}
+ .product-info{padding:12px 10px 14px}
+ .banner{border-radius:13px}
+ .banner-copy h2{font-size:27px}
+}
+
+</style>
+</head>
+<body>
+<div class="topline">ارسال رایگان برای سفارش‌های بالای ۱٬۵۰۰٬۰۰۰ تومان</div>
+<header><div class="wrap nav">
+<a class="brand" href="#">نُما<span>.</span></a>
+<nav class="links"><a href="#categories">دسته‌بندی‌ها</a><a href="#products">همه محصولات</a><a href="#about">درباره ما</a></nav>
+<div class="actions"><button class="iconbtn menu-toggle" aria-label="باز کردن دسته‌بندی‌ها" onclick="toggleMenu()"><span></span><span></span><span></span></button><button class="iconbtn" aria-label="جستجو در محصولات" onclick="document.getElementById('products').scrollIntoView()">⌕</button><a class="cart" href="#products">سبد خرید <span id="count">۰</span></a></div>
+</div></header>
+
+<div class="menu-shade" id="menuShade" onclick="toggleMenu()"></div>
+<aside class="menu-drawer" id="menuDrawer" aria-label="منوی دسته‌بندی‌ها">
+  <div class="drawer-top"><a class="brand" href="#home" onclick="toggleMenu()">نُما<span>.</span></a><button class="drawer-close" onclick="toggleMenu()" aria-label="بستن">×</button></div>
+  <div class="drawer-title">دسته‌بندی محصولات</div>
+  <a class="drawer-link" href="#products" onclick="filterProducts('all');toggleMenu()">همه محصولات <span>مشاهده همه ←</span></a>
+  <a class="drawer-link" href="#products" onclick="filterProducts('case');toggleMenu()">قاب گوشی <span>01</span></a>
+  <a class="drawer-link" href="#products" onclick="filterProducts('audio');toggleMenu()">هدفون و صوتی <span>02</span></a>
+  <a class="drawer-link" href="#products" onclick="filterProducts('charging');toggleMenu()">شارژر و کابل <span>03</span></a>
+  <a class="drawer-link" href="#products" onclick="filterProducts('accessory');toggleMenu()">لوازم جانبی <span>04</span></a>
+  <a class="drawer-link" href="#about" onclick="toggleMenu()">درباره نُما <span>↗</span></a>
+</aside>
+
+<main>
+<section class="wrap hero" id="home">
+<div><div class="hero-kicker"><span class="kicker-dot"></span> کالکشن تازه نُما · ۲۰۲۶</div><div class="eyebrow">ACCESSORIES, WITH PERSONALITY</div><h1>جزئیات کوچک،<br><em>تفاوت بزرگ.</em></h1><p>قاب‌هایی برای محافظت از گوشی و اکسسوری‌هایی برای کامل‌کردن استایل روزمره‌ات. ساده، خوش‌ساخت و متفاوت.</p><a class="btn" href="#products">دیدن محصولات <span>←</span></a><a class="btn light" href="#categories">دسته‌بندی‌ها</a></div>
+<div class="hero-photo"><img fetchpriority="high" decoding="async" src="https://i.etsystatic.com/22864258/r/il/6079c0/6864178969/il_fullxfull.6864178969_qcl3.jpg" alt="قاب گوشی مینیمال روی میز"><div class="float-note"><b>استایل خودت رو بساز</b><span>انتخاب‌هایی برای هر سلیقه</span></div><div class="photo-stamp">N<br>°01</div></div>
+</section>
+<section class="wrap quick-benefits"><div><b>01</b><span>طراحی خاص و مینیمال</span></div><div><b>02</b><span>انتخاب‌های کاربردی</span></div><div><b>03</b><span>همراه استایل روزمره</span></div></section>
+<section class="wrap" id="categories">
+<div class="section-head"><div><div class="eyebrow">EXPLORE COLLECTIONS</div><h2>از کجا شروع کنیم؟</h2><p>چیزی که دنبالش هستی، همین‌جاست.</p></div><a class="viewall" href="#products">همه محصولات ←</a></div>
+<div class="categories">
+<a class="cat" href="#products"><img loading="lazy" decoding="async" src="https://i.etsystatic.com/19833028/r/il/39ef44/3955769650/il_fullxfull.3955769650_r2e8.jpg" alt="قاب گوشی"><div class="cat-label"><b>قاب گوشی</b><span>محافظت با امضای استایل تو</span></div></a>
+<a class="cat" href="#products"><img loading="lazy" decoding="async" src="https://www.sudio.com/media/wysiwyg/ProductPage-E2-KF2.jpg" alt="هدفون و هندزفری"><div class="cat-label"><b>صوتی و دیجیتال</b><span>همراه لحظه‌های تو</span></div></a>
+<a class="cat" href="#products"><img loading="lazy" decoding="async" src="https://finelook.com/cdn/shop/files/hf_20260416_145648_ae2a2523-0923-4550-9f3c-c6ab96a58726.png?v=1776352683&width=896" alt="لوازم جانبی"><div class="cat-label"><b>اکسسوری</b><span>جزئیات دوست‌داشتنی</span></div></a>
+</div></section>
+<section class="wrap" id="products">
+<div class="section-head"><div><div class="eyebrow">OUR PICKS</div><h2>انتخاب‌های محبوب</h2><p>چند انتخاب خاص برای شروع.</p></div><span class="viewall">کالکشن جدید</span></div>
+<div class="filter-row" aria-label="فیلتر دسته‌بندی محصولات">
+<button class="filter-chip active" onclick="filterProducts('all',this)">همه</button>
+<button class="filter-chip" onclick="filterProducts('case',this)">قاب گوشی</button>
+<button class="filter-chip" onclick="filterProducts('audio',this)">هدفون و صوتی</button>
+<button class="filter-chip" onclick="filterProducts('charging',this)">شارژر و کابل</button>
+<button class="filter-chip" onclick="filterProducts('accessory',this)">لوازم جانبی</button>
+</div>
+<div class="products">
+<article class="product" data-category="case"><div class="product-img"><img loading="lazy" decoding="async" src="https://i.etsystatic.com/22864258/r/il/6079c0/6864178969/il_fullxfull.6864178969_qcl3.jpg" alt="قاب مینیمال کرم"><span class="tag">پرفروش</span></div><div class="product-info"><h3>قاب مینیمال کرم</h3><span class="price">۴۸۹٬۰۰۰ تومان</span><button class="add" onclick="addCart('قاب مینیمال کرم')">+</button></div></article>
+<article class="product" data-category="case"><div class="product-img"><img loading="lazy" decoding="async" src="https://i.etsystatic.com/19833028/r/il/39ef44/3955769650/il_fullxfull.3955769650_r2e8.jpg" alt="قاب کلاسیک مشکی"><span class="tag">جدید</span></div><div class="product-info"><h3>قاب کلاسیک مشکی</h3><span class="price">۵۲۹٬۰۰۰ تومان</span><button class="add" onclick="addCart('قاب کلاسیک مشکی')">+</button></div></article>
+<article class="product" data-category="audio"><div class="product-img"><img loading="lazy" decoding="async" src="https://www.sudio.com/media/wysiwyg/ProductPage-E2-KF2.jpg" alt="هدفون بی‌سیم"><span class="tag">منتخب</span></div><div class="product-info"><h3>هدفون بی‌سیم</h3><span class="price">۱٬۲۹۰٬۰۰۰ تومان</span><button class="add" onclick="addCart('هدفون بی‌سیم')">+</button></div></article>
+<article class="product" data-category="accessory"><div class="product-img"><img loading="lazy" decoding="async" src="https://avolt.com/cdn/shop/files/C1-C-to-L-STYLE-4_BEIGE-B-STYLE-4-_245---Copy_1.png?v=1751402419&width=1600" alt="شارژر و لوازم جانبی"><span class="tag">کاربردی</span></div><div class="product-info"><h3>اکسسوری روزمره</h3><span class="price">۳۶۹٬۰۰۰ تومان</span><button class="add" onclick="addCart('اکسسوری روزمره')">+</button></div></article>
+<article class="product" data-category="charging"><div class="product-img"><img loading="lazy" decoding="async" src="https://www.stocketik.com/1808886-large_default/layaback-support-et-chargeur.jpg" alt="شارژر دیواری"><span class="tag">روزمره</span></div><div class="product-info"><h3>شارژر سریع</h3><span class="price">۶۹۹٬۰۰۰ تومان</span><button class="add" onclick="addCart('شارژر سریع')">+</button></div></article>
+<article class="product" data-category="accessory"><div class="product-img"><img loading="lazy" decoding="async" src="https://finelook.com/cdn/shop/files/hf_20260416_145648_ae2a2523-0923-4550-9f3c-c6ab96a58726.png?v=1776352683&width=896" alt="پایه نگهدارنده گوشی"><span class="tag">کاربردی</span></div><div class="product-info"><h3>پایه نگهدارنده گوشی</h3><span class="price">۲۹۹٬۰۰۰ تومان</span><button class="add" onclick="addCart('پایه نگهدارنده گوشی')">+</button></div></article>
+</div></section>
+<section class="wrap banner" id="about"><div class="banner-copy"><div class="eyebrow">LESS, BUT BETTER</div><h2>ساده انتخاب کن.<br>متفاوت دیده شو.</h2><p>در نُما، هر محصول با این فکر انتخاب می‌شود که هم کاربردی باشد و هم حس خوبی به استفاده روزمره‌ات اضافه کند.</p><a class="btn" href="#products">کشف محصولات</a></div><img loading="lazy" decoding="async" src="https://cdn.sanity.io/images/nfj4367n/global_20260220/93ace8011b1b67cc912e7badf7fc5b9db40a0703-1024x1024.png" alt="گوشی هوشمند"></section>
+<section class="wrap values"><div class="value"><div class="symbol">✳</div><h3>انتخاب با دقت</h3><p>محصولات کاربردی با طراحی ساده و ماندگار.</p></div><div class="value"><div class="symbol">⌁</div><h3>بسته‌بندی زیبا</h3><p>سفارش تو با توجه به جزئیات آماده می‌شود.</p></div><div class="value"><div class="symbol">♡</div><h3>پشتیبانی همراه</h3><p>برای انتخاب بهتر، کنارت هستیم.</p></div></section>
+</main>
+<footer><div class="wrap"><div class="footgrid"><div><a class="brand" href="#">نُما<span>.</span></a><p>اکسسوری‌هایی برای سلیقه‌های خاص.<br>ساده، کاربردی و دوست‌داشتنی.</p></div><div><h3>دسترسی سریع</h3><p><a href="#products">محصولات</a><br><a href="#categories">دسته‌بندی‌ها</a><br><a href="#about">درباره ما</a></p></div><div><h3>ارتباط با ما</h3><p>اینستاگرام: @noma.store<br>تلفن: ۰۲۱-۱۲۳۴۵۶۷۸<br>شنبه تا پنجشنبه، ۹ تا ۱۸</p></div></div><div class="copyright">© تمامی حقوق برای فروشگاه نُما محفوظ است.</div></div></footer>
+<button class="chat-launch" onclick="toggleChat()">گفت‌وگو با پشتیبانی　✦</button>
+<div class="chatbox" id="chatbox"><div class="chathead"><div>پشتیبانی نُما<small>پاسخ‌گوی آنلاین · نسخه نمایشی</small></div><button onclick="toggleChat()" style="background:none;border:0;color:white;font-size:20px">×</button></div><div class="chatbody" id="chatbody"><div class="bubble">سلام! به نُما خوش اومدی 🌿<br>چطور می‌تونیم کمکت کنیم؟</div></div><form class="chatform" onsubmit="sendChat(event)"><input id="chatinput" placeholder="پیامت رو بنویس..." autocomplete="off"><button>ارسال</button></form></div>
+<div class="toast" id="toast">به سبد خرید اضافه شد</div>
+<script>
+
+function toggleMenu(){
+  document.getElementById('menuDrawer').classList.toggle('open');
+  document.getElementById('menuShade').classList.toggle('open');
+}
+function filterProducts(category, button){
+  document.querySelectorAll('.product').forEach(card=>{
+    card.style.display = (category==='all' || card.dataset.category===category) ? '' : 'none';
+  });
+  document.querySelectorAll('.filter-chip').forEach(chip=>chip.classList.remove('active'));
+  if(button) button.classList.add('active');
+  else {
+    const match=[...document.querySelectorAll('.filter-chip')].find(chip=>chip.getAttribute('onclick').includes("'"+category+"'"));
+    if(match) match.classList.add('active');
+  }
+}
+
+let cart=0;
+function addCart(name){cart++;document.getElementById('count').textContent=String(cart).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);const t=document.getElementById('toast');t.textContent=name+' به سبد خرید اضافه شد';t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+function toggleChat(){document.getElementById('chatbox').classList.toggle('open')}
+function sendChat(e){e.preventDefault();const input=document.getElementById('chatinput'),body=document.getElementById('chatbody'),v=input.value.trim();if(!v)return;const b=document.createElement('div');b.className='bubble user';b.textContent=v;body.appendChild(b);input.value='';body.scrollTop=body.scrollHeight;setTimeout(()=>{const r=document.createElement('div');r.className='bubble';r.textContent='ممنون از پیامت! این گفت‌وگو در حال حاضر نمایشی است. برای پاسخ‌گویی واقعی، باید چت به واتساپ یا سامانه پشتیبانی متصل شود.';body.appendChild(r);body.scrollTop=body.scrollHeight},650)}
+</script>
+</body></html>
